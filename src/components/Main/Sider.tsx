@@ -1,34 +1,54 @@
 'use client'
 
 import Image from 'next/image'
-import { Layout, Menu } from 'ui-framework-aditya'
+import { Layout, Menu, Tooltip } from 'ui-framework-aditya'
 
 const sidebarItems = [
   {
     key: '1',
-    icon: <Image src='/Icon.svg' alt='' width={18} height={18} />,
-    label: 'Wise'
+    icon: (
+      <Tooltip title="Wise" placement="right">
+        <Image src="/LogoWise.png" alt="Wise" width={32} height={32} />
+      </Tooltip>
+    ),
   },
   {
     key: '2',
-    icon: <Image src='/BRILink.png' alt='' width={18} height={18} />,
-    label: 'BRILink'
+    icon: (
+      <Tooltip title="Link Generator" placement="right">
+        <Image src="/LogoLink.png" alt="Link Generator" width={32} height={32} />
+      </Tooltip>
+    ),
   },
   {
     key: '3',
-    icon: <Image src='/LetterGenerator.png' alt='' width={18} height={18} />,
-    label: 'Letter Generator'
+    icon: (
+      <Tooltip title="Letter Generator" placement="right">
+        <Image src="/LogoLetterGenerator.png" alt="Letter Generator" width={32} height={32} />
+      </Tooltip>
+    ),
   },
   {
     key: '4',
-    icon: <Image src='/ContentFactory.png' alt='' width={18} height={20} />,
-    label: 'Content Factory'
+    icon: (
+      <Tooltip title="Brain" placement="right">
+        <Image src="/LogoBrain.png" alt="Brain" width={32} height={32} />
+      </Tooltip>
+    ),
+  },
+  {
+    key: '5',
+    icon: (
+      <Tooltip title="Content Factory" placement="right">
+        <Image src="/LogoContentFactory.png" alt="Content Factory" width={32} height={32} />
+      </Tooltip>
+    ),
   },
 ]
 
 const Sider = () => {
   return (
-    <Layout.Sider collapsed={true} width={280} style={{ background: '#ECF3FE', borderRadius: '0px 10px 4px 0px' }}>
+    <Layout.Sider width={90} style={{ background: '#ECF3FE', boxShadow: '0px 2px 8px 0px #00000026' }}>
       <Menu
         mode="inline"
         items={sidebarItems}

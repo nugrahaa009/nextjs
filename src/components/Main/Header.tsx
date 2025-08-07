@@ -21,7 +21,7 @@ const items: MenuProps['items'] = [
 
 const Header = () => {
   return (
-    <Layout.Header style={{ background: '#ECF3FE', height: 68, padding: '0px 20px', borderBottom: '1px solid #FBFDFF' }}>
+    <Layout.Header style={{ background: '#ECF3FE', height: 68, padding: '0px 20px', boxShadow: '0px -1px 0px 0px #F0F0F0 inset' }}>
       <Row gutter={16}>
         <Col span={12} style={{ paddingTop: 12 }}>
           <Image src='/logo.png' alt='logo' width={162} height={36} />
